@@ -9,26 +9,65 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/48030cbaf5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Index.css">
 </head>
 
 <body>
-    <div class="header col-lg-12 row">
-        <div class="header__left">
-            <div class="left__img"></div>
-            <div class="left__menu-icon"></div>
-        </div>
-        <div class="header__blank"></div>
-        <div class="header__account">
-            <div class="account__zoom-button"></div>
-            <div class="account__user">
-                <div class="user__img"></div>
-                <div class="user__dropdown-option"></div>
+    <div class="body__container">
+        <div class="header col-lg-12 col-xl-12 col-xxl-12">
+            <div class="header__left col-lg-3 col-xl-3 col-xxl-3">
+                <div class="left__img col-10">
+                    <img src="./Images/Logo-HNC.png" alt="">
+                </div>
+                <div class="left__menu-icon col-2"></div>
+            </div>
+            <div class="header__blank col-lg-6 col-xl-6 col-xxl-6"></div>
+            <div class="header__account col-lg-3 col-xl-3 col-xxl-3">
+                <div class="account__zoom-button"></div>
+                <div class="account__user">
+                    <div class="user__img"></div>
+                    <div class="user__dropdown-option"></div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="sidebar">
-        <div class="sidebar__search-bar"></div>
-        <div class="sidebar__menu"></div>
+        <div class="sidebar">
+            <div class="sidebar__search-bar"></div>
+            <div class="sidebar__menu">
+                <ul class="menu__dropdown-list">
+                    <li>
+                        <i></i> <span> Dashboard</span> <i></i>
+                        <ul class="dropdown-list__list">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i></i> <span> Account</span> <i></i>
+                        <ul class="dropdown-list__list">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i></i> <span> Application</span> <i></i>
+                        <ul class="dropdown-list__list">
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i></i> <span> Address</span> <i></i>
+                        <ul class="dropdown-list__list">
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
