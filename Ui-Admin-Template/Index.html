@@ -15,8 +15,8 @@
 
 <body>
     <div class="body__container">
-        <div class="header col-lg-12 col-xl-12 col-xxl-12">
-            <div class="header__left col-lg-2 col-xl-2 col-xxl-2">
+        <div class="header col-lg-12">
+            <div class="header__left col-lg-2">
                 <div class="left__img col-10">
                     <div class="img__imge-container">
                         <img src="./Images/Logo-HNC.png" alt="">
@@ -26,24 +26,24 @@
 
                 </div>
             </div>
-            <div class="header__blank col-lg-8 col-xl-8 col-xxl-8">
+            <div class="header__blank col-lg-7 col-xl-8">
                 <div class="icon-container-icon">
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-bars" id="sidebar__action"></i>
                 </div>
             </div>
-            <div class="header__account col-lg-2 col-xl-2 col-xxl-2">
-                <div class="account__zoom-button col-lg-2 col-xl-2 col-xxl-2">
-                    <div id="button__button" class="button__zoom-button col-lg-12 col-xl-12 col-xxl-12">
+            <div class="header__account col-lg-3 col-xl-2">
+                <div class="account__zoom-button col-lg-2">
+                    <div id="button__button" class="button__zoom-button col-lg-12">
                         <i class="fa-solid fa-expand"></i>
                     </div>
                 </div>
-                <div class="account__user col-lg-10 col-xl-10 col-xxl-10">
-                    <div class="account__account-container col-lg-12 col-xl-12 col-xxl-12">
-                        <div class="user__img-container col-lg-12 col-xl-12 col-xxl-12">
+                <div class="account__user col-md-10 col-lg-10">
+                    <div class="account__account-container col-lg-12">
+                        <div class="user__img-container col-lg-12">
                             <div class="img-container__img">
                                 <img src="./Images/blank-profile-picture.png" alt="">
                             </div>
-                            <div id="dropdown" class="img-container__account-text col-lg-10 col-xl-10 col-xxl-10">
+                            <div id="dropdown" class="img-container__account-text col-lg-10">
                                 <span>fastlink / admin</span> <i class="fa-solid fa-angle-down"></i>
                             </div>
                         </div>
@@ -62,29 +62,192 @@
                 </div>
             </div>
         </div>
+        <!-- Mobile navbar-->
+        <div class="mobile col-lg-12">
+            <div class="header__left col-md-3 col-lg-2">
+                <div class="left__img col-10">
+                    <div class="img__imge-container">
+                        <img src="./Images/Logo-HNC.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="header__blank col-md-3 col-lg-7 col-xl-8">
+            </div>
+            <div class="header__account col-md-6 col-lg-3 col-xl-2">
+                <div class="account__zoom-button col-lg-2">
+                    <div id="mobile__button__button" class="button__zoom-button col-lg-12">
+                        <i class="fa-solid fa-expand"></i>
+                    </div>
+                </div>
+                <div class="account__user col-md-10 col-lg-10">
+                    <div class="account__account-container col-lg-12">
+                        <div class="user__img-container col-lg-12">
+                            <div class="img-container__img">
+                                <img src="./Images/blank-profile-picture.png" alt="">
+                            </div>
+                            <div id="mobile__dropdown" class="img-container__account-text col-md-10 col-lg-10">
+                                <span>fastlink / admin</span> <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                            <div class="icon-container-icon" id="user__sidebar-menu">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                        </div>
+                        <div class="moblie__user__dropdown-option">
+                            <ul>
+                                <li>
+                                    <i class="fa-regular fa-user"></i> <span>Profile</span>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-arrow-rotate-left"></i> <span>Log out</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end moblie navbar -->
         <div class="body__main-container col-lg-12 col-xl-12 col-xxl-12">
-            <div class="sidebar col-lg-2 col-xl-2 col-xxl-2">
-                <div class="sidebar__search-bar"></div>
+            <!-- expanse toggle -->
+            <div class="sidebar col-lg-2 col-xl-2 col-xxl-2" id="main__sidebar-active">
+                <div class="sidebar__search-bar">
+                    <div class="search-bar__search">
+                        <div class="search__input col-10">
+                            <input type="text" class="input__text" placeholder="Search...">
+                        </div>
+                        <div class="search__icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
                 <div class="sidebar__menu">
                     <ul class="menu__dropdown-list">
-                        <li id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown button <i class="fa-solid fa-angle-right"></i>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <li class="dropdown-item"><a href="">Action</a></li>
-                                <li class="dropdown-item"><a href="">Another action</a></li>
-                                <li class="dropdown-item"><a href="">Something else here</a></li>
+                        <li id="" class="menu__item">
+                            <span class="item__dropdown-button"><i class="fas fa-th"></i><span class="text__off">Dashboard</span><i class="fa-solid fa-angle-right text__off"></i></span>
+                            <ul class="dropdown-list list__off">
+                                <li class="menu__item"><a href="">Action</a></li>
+                                <li class="menu__item"><a href="">Another action</a></li>
+                                <li class="menu__item">
+                                    <span class="item__dropdown-button">Something else here <i class="fa-solid fa-angle-right"></i></span>
+                                    <ul class="dropdown-lis list__offt">
+                                        <li class="menu__item"><a href="">Action</a></li>
+                                        <li class="menu__item"><a href="">Another action</a></li>
+                                        <li class="menu__item"><a href="">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="" class="menu__item">
+                            <span class="item__dropdown-button"><i class="fas fa-th"></i><span class="text__off">Dashboard</span><i class="fa-solid fa-angle-right text__off"></i></span>
+                            <ul class="dropdown-list list__off">
+                                <li class="menu__item"><a href="">Action</a></li>
+                                <li class="menu__item"><a href="">Another action</a></li>
+                                <li class="menu__item">
+                                    <span class="item__dropdown-button">Something else here <i class="fa-solid fa-angle-right"></i></span>
+                                    <ul class="dropdown-list list__off">
+                                        <li class="menu__item"><a href="">Action</a></li>
+                                        <li class="menu__item"><a href="">Another action</a></li>
+                                        <li class="menu__item"><a href="">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="" class="menu__item">
+                            <span class="item__dropdown-button"><i class="fas fa-th"></i><span class="text__off">Dashboard</span><i class="fa-solid fa-angle-right text__off"></i></span>
+                            <ul class="dropdown-list list__off">
+                                <li class="menu__item"><a href="">Action</a></li>
+                                <li class="menu__item"><a href="">Another action</a></li>
+                                <li class="menu__item">
+                                    <span class="item__dropdown-button">Something else here <i class="fa-solid fa-angle-right"></i></span>
+                                    <ul class="dropdown-list list__off">
+                                        <li class="menu__item"><a href="">Action</a></li>
+                                        <li class="menu__item"><a href="">Another action</a></li>
+                                        <li class="menu__item"><a href="">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="" class="menu__item">
+                            <span class="item__dropdown-button"><i class="fas fa-th"></i><span class="text__off">Dashboard</span><i class="fa-solid fa-angle-right text__off"></i></span>
+                            <ul class="dropdown-list list__off">
+                                <li class="menu__item"><a href="">Action</a></li>
+                                <li class="menu__item"><a href="">Another action</a></li>
+                                <li class="menu__item">
+                                    <span class="item__dropdown-button">Something else here <i class="fa-solid fa-angle-right"></i></span>
+                                    <ul class="dropdown-list list__off">
+                                        <li class="menu__item"><a href="">Action</a></li>
+                                        <li class="menu__item"><a href="">Another action</a></li>
+                                        <li class="menu__item"><a href="">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- sub toggle -->
+            <div class="off col-lg-2 col-xl-2 col-xxl-2" id="main__sidebar-active">
+                <div class="off__sidebar__menu">
+                    <ul class="off__menu__dropdown-list">
+                        <li id="" class="off__menu__item">
+                            <span class="off__item__dropdown-button"><i class="fas fa-th"></i></span>
+                            <ul class="off__dropdown-list">
+                                <li class="off__menu__item">Dashboard</li>
+                                <li class="off__menu__item"><a href="">Action</a></li>
+                                <li class="off__menu__item"><a href="">Another action</a></li>
+                                <li class="off__menu__item">
+                                    <span class="off__item__dropdown-button">Something else here </span>
+                                    <!-- <ul class="off__dropdown-list">
+                                        <li class="off__menu__item"><a href="">Action</a></li>
+                                        <li class="off__menu__item"><a href="">Another action</a></li>
+                                        <li class="off__menu__item"><a href="">Something else here</a></li>
+                                    </ul> -->
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="" class="off__menu__item">
+                            <span class="off__item__dropdown-button"><i class="fas fa-th"></i></span>
+                            <ul class="off__dropdown-list">
+                                <li class="off__menu__item">Dashboard</li>
+                                <li class="off__menu__item"><a href="">Action</a></li>
+                                <li class="off__menu__item"><a href="">Another action</a></li>
+                                <li class="off__menu__item">
+                                    <span class="off__item__dropdown-button">Something else here </span>
+                                    <!-- <ul class="off__dropdown-list">
+                                        <li class="off__menu__item"><a href="">Action</a></li>
+                                        <li class="off__menu__item"><a href="">Another action</a></li>
+                                        <li class="off__menu__item"><a href="">Something else here</a></li>
+                                    </ul> -->
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="" class="off__menu__item">
+                            <span class="off__item__dropdown-button"><i class="fas fa-th"></i></span>
+                            <ul class="off__dropdown-list">
+                                <li class="off__menu__item">Dashboard</li>
+                                <li class="off__menu__item"><a href="">Action</a></li>
+                                <li class="off__menu__item"><a href="">Another action</a></li>
+                                <li class="off__menu__item">
+                                    <span class="off__item__dropdown-button">Something else here </span>
+                                    <!-- <ul class="off__dropdown-list">
+                                        <li class="off__menu__item"><a href="">Action</a></li>
+                                        <li class="off__menu__item"><a href="">Another action</a></li>
+                                        <li class="off__menu__item"><a href="">Something else here</a></li>
+                                    </ul> -->
+                                </li>
                             </ul>
                         </li>
 
                     </ul>
                 </div>
             </div>
-            <div class="main-container__content col-lg-10 col-xl-10 col-xxl-10"></div>
         </div>
+        <div class="main-container__content col-lg-10 col-xl-10 col-xxl-10"></div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
