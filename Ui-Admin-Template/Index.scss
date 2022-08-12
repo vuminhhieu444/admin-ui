@@ -87,6 +87,7 @@ body {
             .header__blank {
                 height: 100%;
                 margin-left: 0px;
+                flex: 2;
             }
             .header__account {
                 height: 100%;
@@ -94,6 +95,13 @@ body {
                 display: flex;
                 padding-left: 0px !important;
                 padding-right: 0px !important;
+                @include reponsive_768 {
+                    width: 40%;
+                }
+                .header__left_icon {
+                    width: 5.666667% !important;
+                    margin-left: -6.5%;
+                }
                 .account__zoom-button {
                     height: 100%;
                     padding-left: 0px !important;
@@ -202,12 +210,16 @@ body {
                     }
                 }
             }
-            .header__left {
+            .mobile__header__left {
                 height: 100%;
+                // width: ;
                 left: 0px;
+                width: 4.666667% !important;
+                @include reponsive_768 {
+                    width: 19.666667% !important;
+                }
                 .left__img {
                     height: 100%;
-                    margin-left: 0px;
                     padding-left: 0px !important;
                     margin: auto;
                     .img__imge-container {
@@ -243,9 +255,13 @@ body {
             @include reponsive_768 {
                 display: none;
             }
+            .header__blank_toggle {
+                padding-left: 0px;
+            }
             .header__blank {
                 height: 100%;
                 margin-left: 0px;
+                flex: 2;
                 .icon-container-icon {
                     height: 100%;
                     position: relative;
@@ -357,12 +373,16 @@ body {
                     }
                 }
             }
+            .header__left_icon {
+                width: 4% !important;
+                margin-left: -0.5%;
+            }
             .header__left {
                 height: 100%;
                 left: 0px;
+                width: 17%;
                 .left__img {
                     height: 100%;
-                    margin-left: 0px;
                     padding-left: 0px !important;
                     margin: auto;
                     .img__imge-container {
@@ -399,6 +419,9 @@ body {
                 padding-right: 0.5% !important;
                 padding-top: 5%;
                 width: 2.5%;
+                @include reponsive_768 {
+                    display: none !important;
+                }
                 .off__sidebar__menu {
                     height: 100%;
                     width: 100%;
@@ -413,21 +436,22 @@ body {
                         @include reponsive_768 {
                             padding-top: 10%;
                         }
-                        .off__menu__item {
+                        &>.off__menu__item {
                             background-color: inherit;
                             padding-left: 20% !important;
                             padding-right: 5% !important;
                             line-height: 3.5rem;
                             margin-left: -23%;
-                            background-color: #fff;
                             &:hover {
-                                background-color: #eaeef3;
+                                background-color: #F4F6F9;
+                                box-shadow: 5px 5px rgb(44 53 66 / 20%);
                                 &>ul {
                                     display: block;
-                                    background-color: #eaeef3;
+                                    background-color: #F4F6F9;
                                 }
                             }
                             &>ul {
+                                background-color: #F4F6F9;
                                 position: absolute;
                                 border: none;
                                 display: none;
@@ -435,16 +459,26 @@ body {
                                 padding-left: 5% !important;
                                 padding-right: 5% !important;
                                 margin-top: -3.5rem;
-                                margin-left: 4.2rem;
-                                width: 10rem;
+                                margin-left: 2rem;
+                                width: 13rem;
+                                box-shadow: 5px 5px rgb(44 53 66 / 20%);
+                                @include reponsive_992 {
+                                    margin-left: 1.3rem;
+                                }
                                 & li:hover {
                                     background-color: inherit;
+                                }
+                                li {
+                                    padding-left: 10%;
+                                }
+                                @include reponsive_1024 {
+                                    margin-left: 1.3rem;
                                 }
                             }
                             .off__item__dropdown-button {
                                 display: flex;
                                 justify-content: space-between;
-                                vertical-align: middle;
+                                // vertical-align: middle;
                                 i {
                                     transform: translate(0%, 34%);
                                 }
@@ -453,12 +487,25 @@ body {
                                     font-family: '';
                                 }
                                 .text__off {
-                                    display: none;
+                                    // display: none;
+                                    // @include reponsive_768 {
+                                    //     flex-grow: 2;
+                                    //     padding-left: 2%;
+                                    // }
+                                }
+                                .text__align-flex-grow {
+                                    flex-grow: 2;
+                                    padding-left: 2%;
+                                }
+                                span {
+                                    // @include reponsive_768 {
+                                    flex-grow: 2 !important;
+                                    padding-left: 2%;
+                                    // }
                                 }
                             }
                             &>.off__item__dropdown-button {
                                 display: block;
-                                // width: 100%;
                             }
                             &.show {
                                 &>ul {
@@ -474,14 +521,20 @@ body {
                 background-color: #fff;
                 padding-left: 0.5% !important;
                 padding-right: 0.5% !important;
+                @include reponsive_768 {
+                    display: none;
+                }
                 .sidebar__search-bar {
                     margin-top: 10%;
                     width: 100%;
-                    height: 13%;
+                    height: 5.5rem;
                     padding-right: 0% !important;
                     padding-left: 0% !important;
                     @include reponsive_768 {
-                        display: none;
+                        display: block !important;
+                    }
+                    @include reponsive_768 {
+                        margin-top: 3%;
                     }
                     .search-bar__search {
                         height: 46%;
@@ -490,11 +543,19 @@ body {
                         border-radius: 4px;
                         display: flex;
                         overflow: hidden;
+                        @include reponsive_768 {
+                            width: 90%;
+                            margin: auto;
+                        }
                         .search__input {
                             position: relative;
                             height: 100%;
+                            width: 100%;
                             padding-left: 0px !important;
                             padding-right: 0px !important;
+                            @include reponsive_768 {
+                                width: 94%;
+                            }
                             .input__text {
                                 vertical-align: middle;
                                 height: 100%;
@@ -503,11 +564,22 @@ body {
                                 outline: none;
                                 padding-left: 5%;
                                 padding-right: 16%;
+                                @include reponsive_768 {
+                                    padding-left: 2%;
+                                }
                             }
                         }
                         .search__icon {
                             width: 100%;
                             margin: auto;
+                            @include reponsive_768 {
+                                width: 6%;
+                            }
+                            .icon_icon {
+                                width: fit-content;
+                                height: 100%;
+                                margin: auto;
+                            }
                         }
                     }
                 }
@@ -522,7 +594,7 @@ body {
                         padding-left: 0% !important;
                         padding-right: 0% !important;
                         @include reponsive_768 {
-                            padding-top: 10%;
+                            padding-top: 0%;
                         }
                         .menu__item {
                             background-color: inherit;
@@ -545,13 +617,17 @@ body {
                                 width: 100%;
                                 display: flex;
                                 justify-content: space-between;
-                                vertical-align: middle;
+                                // vertical-align: middle;
                                 i {
                                     transform: translate(0%, 34%);
                                 }
                                 &::after {
                                     display: block;
                                     font-family: '';
+                                }
+                                .text__align-flex-grow {
+                                    flex-grow: 2;
+                                    padding-left: 2%;
                                 }
                             }
                             &.show {

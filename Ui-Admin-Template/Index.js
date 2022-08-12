@@ -4,6 +4,7 @@ var fullScreenStatus = 0;
 var mobileFullScreenStatus = 0;
 var elem = document.documentElement;
 var sidebarStatus = 0;
+var mobileSidebarStatus = 0;
 $(document).ready(function() {
     $("#dropdown").click(function() {
         if (dropdownStatus == 0) {
@@ -59,34 +60,35 @@ $(document).ready(function() {
         })
         //    sidebar js
     $("#sidebar__action").click(function() {
-            if (sidebarStatus == 0) {
-                $(".sidebar").css("display", "none");
-                $(".body__main-container").css("display", "block");
-                $(".off").css("display", "block");
-                // $(".item__dropdown-button").off("click");
-                sidebarStatus = 1;
-            } else if (sidebarStatus == 1) {
-                $(".off").css("display", "none");
-                $(".sidebar").css("display", "block");
-                $(".body__main-container").css("display", "flex");
-                // $(".item__dropdown-button").bind("click");
-                sidebarStatus = 0;
-            }
-        })
-        // end sidebar js
-    function clickHandler(e) {
-        e.click(function(event) {
-            event.stopPropagation();
-            alert("The span element was clicked.");
-        });
-    }
-
+        if (sidebarStatus == 0) {
+            $(".sidebar").css("display", "none");
+            $(".body__main-container").css("display", "block");
+            $(".off").css("display", "block");
+            $("#mobile__logo").attr("src", "");
+            $("#mobile__logo").attr("src", "./Images/Logo-HNC_icon.png");
+            $(".header__left").addClass("header__left_icon");
+            sidebarStatus = 1;
+        } else if (sidebarStatus == 1) {
+            $(".off").css("display", "none");
+            $(".sidebar").css("display", "block");
+            $(".body__main-container").css("display", "flex");
+            $("#mobile__logo").attr("src", "./Images/Logo-HNC.png");
+            $(".header__left").removeClass("header__left_icon");
+            sidebarStatus = 0;
+        }
+    });
+    $("#user__sidebar-menu").click(function() {
+        if (mobileSidebarStatus == 0) {
+            $(".sidebar").css("display", "block");
+            mobileSidebarStatus = 1;
+        } else if (mobileSidebarStatus == 1) {
+            $(".sidebar").css("display", "none");
+            mobileSidebarStatus = 0
+        }
+    });
+    // end sidebar js
     function addClassDown(el) {
         $(el.find(".fa-solid")[0]).attr("class", "fa-solid fa-angle-down")
-    }
-
-    function addClassUp(el) {
-        $(el.find(".fa-solid")[0]).attr("class", "fa-solid fa-angle-right")
     }
 
     function closeAllMenu() {
@@ -101,6 +103,5 @@ $(document).ready(function() {
     function closeElement(el) {
         el.removeClass("show");
         $(el.find(".fa-solid")).attr("class", "fa-solid fa-angle-right");
-        console.log(el);
     }
 });
