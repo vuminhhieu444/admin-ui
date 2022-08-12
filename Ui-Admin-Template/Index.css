@@ -439,6 +439,7 @@ body .body__container .body__main-container .off .off__sidebar__menu .off__menu_
 body .body__container .body__main-container .off .off__sidebar__menu .off__menu__dropdown-list > .off__menu__item:hover > ul {
   display: block;
   background-color: #F4F6F9;
+  margin-left: 83.7%;
 }
 body .body__container .body__main-container .off .off__sidebar__menu .off__menu__dropdown-list > .off__menu__item > ul {
   background-color: #F4F6F9;
@@ -463,6 +464,30 @@ body .body__container .body__main-container .off .off__sidebar__menu .off__menu_
 }
 body .body__container .body__main-container .off .off__sidebar__menu .off__menu__dropdown-list > .off__menu__item > ul li {
   padding-left: 10%;
+}
+body .body__container .body__main-container .off .off__sidebar__menu .off__menu__dropdown-list > .off__menu__item > ul li ul {
+  list-style: none;
+  position: absolute;
+  height: fit-content;
+  width: 13rem;
+  background-color: #F4F6F9;
+  box-shadow: 5px 5px rgba(44, 53, 66, 0.2);
+  border: none;
+  display: none;
+  margin-top: -3.5rem;
+  margin-left: 11.5rem;
+}
+body .body__container .body__main-container .off .off__sidebar__menu .off__menu__dropdown-list > .off__menu__item > ul li ul > li:hover > ul {
+  width: 13rem;
+  background-color: #F4F6F9;
+  box-shadow: 5px 5px rgba(44, 53, 66, 0.2);
+  border: none;
+  margin-top: -3.5rem;
+  margin-left: 9.4rem;
+  display: block;
+}
+body .body__container .body__main-container .off .off__sidebar__menu .off__menu__dropdown-list > .off__menu__item > ul li:hover > ul {
+  display: block;
 }
 @media only screen and (min-width 1024px) and (max-width: 1999px) {
   body .body__container .body__main-container .off .off__sidebar__menu .off__menu__dropdown-list > .off__menu__item > ul {

@@ -448,6 +448,7 @@ body {
                                 &>ul {
                                     display: block;
                                     background-color: #F4F6F9;
+                                    margin-left: 83.7%;
                                 }
                             }
                             &>ul {
@@ -470,6 +471,34 @@ body {
                                 }
                                 li {
                                     padding-left: 10%;
+                                    ul {
+                                        list-style: none;
+                                        position: absolute;
+                                        height: fit-content;
+                                        width: 13rem;
+                                        background-color: #F4F6F9;
+                                        box-shadow: 5px 5px rgb(44 53 66 / 20%);
+                                        border: none;
+                                        display: none;
+                                        margin-top: -3.5rem;
+                                        margin-left: 11.5rem;
+                                        &>li:hover {
+                                            &>ul {
+                                                width: 13rem;
+                                                background-color: #F4F6F9;
+                                                box-shadow: 5px 5px rgb(44 53 66 / 20%);
+                                                border: none;
+                                                margin-top: -3.5rem;
+                                                margin-left: 9.4rem;
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                    &:hover {
+                                        &>ul {
+                                            display: block;
+                                        }
+                                    }
                                 }
                                 @include reponsive_1024 {
                                     margin-left: 1.3rem;
