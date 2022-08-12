@@ -86,7 +86,12 @@ $(document).ready(function() {
             mobileSidebarStatus = 0
         }
     });
+
     // end sidebar js
+    // var offMenuItem = $(".off__menu__item");
+    // window.onload("");
+
+
     function addClassDown(el) {
         $(el.find(".fa-solid")[0]).attr("class", "fa-solid fa-angle-down")
     }
