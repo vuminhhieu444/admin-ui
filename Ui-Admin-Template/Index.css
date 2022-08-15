@@ -3,7 +3,7 @@ body {
   box-sizing: border-box;
   font-size: 16px;
   height: 100vh;
-  position: fixed;
+  position: absolute;
   width: 100vw;
   overflow-x: hidden;
 }
@@ -392,8 +392,14 @@ body .body__container .body__main-container {
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
+body .body__container .body__main-container .main-container__content {
+  padding-left: 6%;
+  padding-top: 2.5%;
+  flex-grow: 4;
+}
 body .body__container .body__main-container .off {
   display: none;
+  float: left;
   font-size: 1em;
   height: 100%;
   background-color: #fff;
@@ -556,8 +562,8 @@ body .body__container .body__main-container .off .off__sidebar__menu .off__menu_
 body .body__container .body__main-container .sidebar {
   height: 100%;
   background-color: #fff;
-  padding-left: 0.5% !important;
-  padding-right: 0.5% !important;
+  padding-left: 0% !important;
+  padding-right: 0% !important;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   body .body__container .body__main-container .sidebar {
@@ -568,16 +574,12 @@ body .body__container .body__main-container .sidebar .sidebar__search-bar {
   margin-top: 10%;
   width: 100%;
   height: 5.5rem;
-  padding-right: 0% !important;
-  padding-left: 0% !important;
+  padding-right: 6.5% !important;
+  padding-left: 6.5% !important;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   body .body__container .body__main-container .sidebar .sidebar__search-bar {
     display: block !important;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  body .body__container .body__main-container .sidebar .sidebar__search-bar {
     margin-top: 3%;
   }
 }
@@ -640,6 +642,7 @@ body .body__container .body__main-container .sidebar .sidebar__menu {
   width: 100%;
   padding-left: 0% !important;
   padding-right: 0% !important;
+  background-color: white;
 }
 body .body__container .body__main-container .sidebar .sidebar__menu .menu__dropdown-list {
   list-style: none;

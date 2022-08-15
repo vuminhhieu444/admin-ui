@@ -80,9 +80,11 @@ $(document).ready(function() {
     $("#user__sidebar-menu").click(function() {
         if (mobileSidebarStatus == 0) {
             $(".sidebar").css("display", "block");
+            $(".main-container__content").css("display", "none");
             mobileSidebarStatus = 1;
         } else if (mobileSidebarStatus == 1) {
             $(".sidebar").css("display", "none");
+            $(".main-container__content").css("display", "block");
             mobileSidebarStatus = 0
         }
     });
