@@ -393,59 +393,92 @@ body .body__container .body__main-container {
   padding-right: 0px !important;
 }
 body .body__container .body__main-container .main-container__content {
-  padding-left: 1.7%;
+  padding-left: 0%;
   padding-top: 2.5%;
   flex-grow: 4;
 }
 body .body__container .body__main-container .main-container__content .content__input {
   width: 90%;
-  height: 100%;
+  height: 34.7rem;
   background-color: #fff;
   margin: auto;
   position: relative;
-  padding-right: 0px !important;
+}
+body .body__container .body__main-container .main-container__content .content__input .content__header {
+  height: 4rem;
+  background-color: #659BE0;
+  padding-left: 0px !important;
 }
 body .body__container .body__main-container .main-container__content .content__input .input__data {
   display: flex;
   width: 95%;
-  height: 100%;
+  height: fit-content;
   margin: auto;
+  flex-flow: wrap;
+  justify-content: space-between;
 }
-body .body__container .body__main-container .main-container__content .content__input .input__data .input__wrap {
-  margin-top: 5%;
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap {
+  margin-top: 3%;
+  margin-left: 0.2%;
+  height: fit-content;
+  width: 32.3%;
+  height: fit-content;
+  display: flex;
+  flex-flow: wrap;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap:focus-within .input__wrap {
+  border-color: #659BE0;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap:focus-within .input__wrap .input__control input {
+  border-left-color: #659BE0;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap:focus-within .input__wrap .input__icon i {
+  color: #659BE0;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .wrap__lable {
+  height: fit-content;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .wrap__lable label {
+  font-size: 12px;
+  font-weight: bold;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap {
+  margin-top: -2%;
   margin-right: 1%;
-  padding-right: 0px !important;
   background-color: #f6f6f6;
   display: flex;
   height: fit-content;
-  width: fit-content;
+  width: 100%;
   border: solid 1px rgb(190, 190, 190);
   overflow: hidden;
   border-radius: 5px;
+  line-height: 1.9;
 }
-body .body__container .body__main-container .main-container__content .content__input .input__data .input__wrap .input__icon {
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__icon {
   padding-left: 0px !important;
   height: 100%;
-  justify-content: center;
+  width: 8%;
+  justify-content: space-around;
+  display: flex;
+  align-self: center;
 }
-body .body__container .body__main-container .main-container__content .content__input .input__data .input__wrap .input__icon i {
-  vertical-align: middle;
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__icon i {
+  align-self: center;
   color: #808080;
 }
-body .body__container .body__main-container .main-container__content .content__input .input__data .input__wrap .input__control {
-  width: fit-content;
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control {
+  width: 92%;
   height: 150%;
   padding-left: 0px !important;
 }
-body .body__container .body__main-container .main-container__content .content__input .input__data .input__wrap .input__control input {
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control input {
   width: 100%;
-  height: 15 0%;
   outline: none;
   border: rgb(190, 190, 190) 1px solid;
   border-top: none;
   border-bottom: none;
   border-right: none;
-  padding-right: 7.5%;
+  padding-right: 4%;
   padding-left: 3%;
   font-size: 0.9em;
 }
