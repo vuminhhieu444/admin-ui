@@ -549,6 +549,7 @@ body .body__container .body__main-container .main-container__content .content__i
   font-size: 0.9em;
 }
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .select2-container {
+  z-index: 9999;
   width: 100% !important;
 }
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .select2-container .selection .select2-selection--single {
@@ -825,7 +826,7 @@ body .body__container .body__main-container .sidebar .sidebar__search-bar .searc
   margin: auto;
 }
 body .body__container .body__main-container .sidebar .sidebar__menu {
-  height: 60%;
+  height: 80%;
   width: 100%;
   padding-left: 0% !important;
   padding-right: 0% !important;
