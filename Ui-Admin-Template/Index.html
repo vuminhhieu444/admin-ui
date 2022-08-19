@@ -8,9 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/48030cbaf5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Index.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
 </head>
 
 <body>
@@ -108,7 +111,7 @@
             </div>
         </div>
         <!-- end moblie navbar -->
-        <div class="body__main-container col-lg-12 col-xl-12 col-xxl-12">
+        <div class="body__main-container">
             <!-- expanse toggle -->
             <div class="sidebar col-lg-2 col-xl-2 col-xxl-2" id="main__sidebar-active">
                 <div class="sidebar__search-bar">
@@ -289,80 +292,146 @@
                     </ul>
                 </div>
             </div>
-            <div class="main-container__content col-lg-10 col-xl-10 col-xxl-10">
+            <div class="main-container__content ">
 
-                <div class="content__input col-lg-12">
-                    <div class="content__header col-lg-12">
-                        <h3>Hello world</h3>
+                <div class="content__input">
+                    <div class="button">
+                        <div class="content__header col-lg-12">
+                            <div class="header__text">
+                                <h6>Hello world</h5>
+                            </div>
+                            <div class="header__button">
+                                <div class="button__action">
+                                    <button class="action__button">
+                                        SYNC ALL
+                                    </button>
+                                    <button class="action__button">
+                                        <i class="fa-solid fa-plus"></i>
+                                        <span>ADD</span>
+                                    </button>
+                                    <button class="button__dropdown">
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="input__data">
-                        <div class="data__control-wrap">
-                            <div class="wrap__lable">
-                                <label for="">Hello world: </label>
-                            </div>
-                            <div class="input__wrap">
-                                <div class="input__icon">
-                                    <i class="fa fa-safari" aria-hidden="true"></i>
+                    <div class="input__data ">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="data__control-wrap">
+                                    <div class="wrap__lable">
+                                        <label for="">Hello world: </label>
+                                    </div>
+                                    <div class="input__wrap">
+                                        <div class="input__icon">
+                                            <i class="fa fa-safari" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="input__control">
+                                            <input type="email" name="" id="">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="input__control">
-                                    <input type="email" name="" id="">
+                            </div>
+                            <div class="col-4">
+                                <div class="data__control-wrap">
+                                    <div class="wrap__lable">
+                                        <label for="">Hello world: </label>
+                                    </div>
+                                    <div class="input__wrap">
+                                        <div class="input__icon">
+                                            <i class="fa fa-safari" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="input__control">
+                                            <input type="email" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="data__control-wrap">
+                                    <div class="wrap__lable">
+                                        <label for="">Hello world: </label>
+                                    </div>
+                                    <div class="input__wrap">
+                                        <div class="input__icon">
+                                            <i class="fa fa-safari" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="input__control">
+                                            <input type="email" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="data__control-wrap">
+                                    <div class="wrap__lable">
+                                        <label for="">Hello world: </label>
+                                    </div>
+                                    <div class="input__wrap">
+                                        <div class="input__icon">
+                                            <i class="fa fa-safari" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="input__control">
+                                            <input type="email" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="data__control-wrap">
+                                    <div class="wrap__lable">
+                                        <label for="">Hello world: </label>
+                                    </div>
+                                    <div class="input__wrap">
+                                        <div class="input__icon">
+                                            <i class="fa fa-safari" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="input__control">
+                                            <select name="" id="seclect-box" class="seclect-box">
+                                                <option value="">Hello</option>
+                                                <option value="">Hello world</option>
+                                                <option value="">Xin chào</option>
+                                                <option value="">Hello world</option>
+                                                <option value="">Hello world</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="data__control-wrap">
+                                    <div class="wrap__lable">
+                                        <label for="">Hello world: </label>
+                                    </div>
+                                    <div class="input__wrap check">
+                                        <div class="input__control checkbox">
+                                            <input type="checkbox" class="check__input" name="" id="">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="data__control-wrap">
-                            <div class="wrap__lable">
-                                <label for="">Hello world: </label>
-                            </div>
-                            <div class="input__wrap">
-                                <div class="input__icon">
-                                    <i class="fa fa-safari" aria-hidden="true"></i>
-                                </div>
-                                <div class="input__control">
-                                    <input type="email" name="" id="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="data__control-wrap">
-                            <div class="wrap__lable">
-                                <label for="">Hello world: </label>
-                            </div>
-                            <div class="input__wrap">
-                                <div class="input__icon">
-                                    <i class="fa fa-safari" aria-hidden="true"></i>
-                                </div>
-                                <div class="input__control">
-                                    <input type="email" name="" id="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="data__control-wrap">
-                            <div class="wrap__lable">
-                                <label for="">Hello world: </label>
-                            </div>
-                            <div class="input__wrap">
-                                <div class="input__icon">
-                                    <i class="fa fa-safari" aria-hidden="true"></i>
-                                </div>
-                                <div class="input__control">
-                                    <input type="email" name="" id="">
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
+
             </div>
+
         </div>
 
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./Index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 </body>
 
 </html>

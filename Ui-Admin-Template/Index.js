@@ -60,7 +60,8 @@ $(document).ready(function() {
         })
         //    sidebar js
     $("#sidebar__action").click(function() {
-        if (sidebarStatus == 0) {
+        console.log(document.documentElement.clientWidth);
+        if (sidebarStatus == 0 && document.documentElement.clientWidth > 1023) {
             $(".sidebar").css("display", "none");
             $(".body__main-container").css("display", "block");
             $(".off").css("display", "block");
@@ -68,7 +69,7 @@ $(document).ready(function() {
             $("#mobile__logo").attr("src", "./Images/Logo-HNC_icon.png");
             $(".header__left").addClass("header__left_icon");
             sidebarStatus = 1;
-        } else if (sidebarStatus == 1) {
+        } else if (sidebarStatus == 1 && document.documentElement.clientWidth > 1023) {
             $(".off").css("display", "none");
             $(".sidebar").css("display", "block");
             $(".body__main-container").css("display", "flex");
@@ -78,7 +79,8 @@ $(document).ready(function() {
         }
     });
     $("#user__sidebar-menu").click(function() {
-        if (mobileSidebarStatus == 0) {
+
+        if (mobileSidebarStatus == 0 && (document.documentElement.clientWidth <= 1023 && document.documentElement.clientWidth >= 768)) {
             $(".sidebar").css("display", "block");
             $(".main-container__content").css("display", "none");
             mobileSidebarStatus = 1;
@@ -88,6 +90,20 @@ $(document).ready(function() {
             mobileSidebarStatus = 0
         }
     });
+
+    $('#seclect-box').select2({
+        closeOnSelect: false
+    });
+    // $('#seclect-box').select(function() {
+    //     // $(this).css("color", "100% !important");
+    //     // $(this).addClass("seclect-box");
+    //     alert("ok");
+    // });
+    // setTimeout(() => {
+    //     // $('#seclect-box').addClass("seclect-box");
+
+    //     $('.input__control span').css("height", "100% !important");
+    // }, 100);
 
     // end sidebar js
     // var offMenuItem = $(".off__menu__item");
