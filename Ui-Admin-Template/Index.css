@@ -7,6 +7,19 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+body .select2-container {
+  z-index: 9999;
+}
+body .select2-container .select2-dropdown .select2-search .select2-search__field {
+  outline: none;
+  border: none;
+}
+body .select2-container .selection .select2-selection--single {
+  height: 100%;
+  border: none;
+  font-size: 0.9em;
+  margin-top: -2px;
+}
 body .col-xl-auto {
   padding-left: 0px;
 }
@@ -518,6 +531,12 @@ body .body__container .body__main-container .main-container__content .content__i
   border-radius: 5px;
   line-height: 1.9 !important;
 }
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap textarea {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap input {
   cursor: pointer;
 }
@@ -534,8 +553,7 @@ body .body__container .body__main-container .main-container__content .content__i
   color: #808080;
 }
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control {
-  width: 92%;
-  padding-left: 0px !important;
+  width: 100%;
 }
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control input {
   width: 100%;
@@ -551,6 +569,10 @@ body .body__container .body__main-container .main-container__content .content__i
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .select2-container {
   z-index: 9999;
   width: 100% !important;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .select2-container .select2-dropdown .select2-search .select2-search__field:focus-visible {
+  outline: none;
+  border: none;
 }
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .select2-container .selection .select2-selection--single {
   height: 100%;

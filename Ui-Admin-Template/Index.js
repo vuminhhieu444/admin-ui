@@ -80,7 +80,7 @@ $(document).ready(function() {
     });
     $("#user__sidebar-menu").click(function() {
 
-        if (mobileSidebarStatus == 0 && (document.documentElement.clientWidth <= 1023 && document.documentElement.clientWidth >= 768)) {
+        if (mobileSidebarStatus == 0) {
             $(".sidebar").css("display", "block");
             $(".main-container__content").css("display", "none");
             mobileSidebarStatus = 1;
@@ -88,27 +88,25 @@ $(document).ready(function() {
             $(".sidebar").css("display", "none");
             $(".main-container__content").css("display", "block");
             mobileSidebarStatus = 0
+        } else {
+            $(".main-container__content").css("display", "block");
         }
     });
 
     $('#seclect-box').select2({
         closeOnSelect: false
-    });
-    // $('#seclect-box').select(function() {
-    //     // $(this).css("color", "100% !important");
-    //     // $(this).addClass("seclect-box");
-    //     alert("ok");
-    // });
-    // setTimeout(() => {
-    //     // $('#seclect-box').addClass("seclect-box");
+    }).on("select2:open", hideSelect2Keyboard);
 
-    //     $('.input__control span').css("height", "100% !important");
-    // }, 100);
+    // tagsinput;
+    var input = document.querySelector('input[name=tags]');
+    // tagsinput;
+    // initialize Tagify on the above input node reference
+    new Tagify(input)
+    $(".control__tags-input").css({ "background-color": "white", "width": "100%" });
 
-    // end sidebar js
-    // var offMenuItem = $(".off__menu__item");
-    // window.onload("");
-
+    function hideSelect2Keyboard(e) {
+        $(".select2-search__field")[0].focus();
+    }
 
     function addClassDown(el) {
         $(el.find(".fa-solid")[0]).attr("class", "fa-solid fa-angle-down")
