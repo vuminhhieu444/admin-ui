@@ -414,6 +414,7 @@ body .body__container .body__main-container .main-container__content {
   overflow-y: scroll;
 }
 body .body__container .body__main-container .main-container__content .content__input {
+  overflow-y: scroll;
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -473,6 +474,11 @@ body .body__container .body__main-container .main-container__content .content__i
 }
 body .body__container .body__main-container .main-container__content .content__input .button .content__header .header__button .button__action .action__button:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.26);
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body .body__container .body__main-container .main-container__content .content__input .button .content__header .header__button .button__action .action__button {
+    font-size: 0.8em;
+  }
 }
 body .body__container .body__main-container .main-container__content .content__input .button .content__header .header__button .button__action .button__dropdown {
   border: none;
@@ -536,14 +542,20 @@ body .body__container .body__main-container .main-container__content .content__i
   border: none;
   width: 100%;
   height: 100%;
+  resize: none;
 }
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap input {
   cursor: pointer;
 }
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__icon-tagsinput {
+  position: relative;
+  align-self: auto !important;
+  margin-top: 10px;
+}
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__icon {
   padding-left: 0px !important;
   height: 100%;
-  width: 8%;
+  width: 34px;
   justify-content: space-around;
   display: flex;
   align-self: center;
@@ -565,6 +577,54 @@ body .body__container .body__main-container .main-container__content .content__i
   padding-right: 4%;
   padding-left: 3%;
   font-size: 0.9em;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .control__tags-input-wrap {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .control__tags-input-wrap input {
+  width: 30%;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .control__tags-input-wrap .wrap__element {
+  height: fit-content;
+  padding: 0px;
+  display: inline-block;
+  background-color: rgb(225, 225, 225);
+  border-radius: 10px;
+  height: 30px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .control__tags-input-wrap .wrap__element .wrap__remove-element {
+  display: inline-block;
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  position: relative;
+  border-radius: 50%;
+  top: -6px;
+  left: -3px;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .control__tags-input-wrap .wrap__element .wrap__remove-element i {
+  position: absolute;
+  font-size: 12px;
+  left: 20%;
+  top: 8%;
+  color: gray;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .control__tags-input-wrap .wrap__element .wrap__remove-element i:hover {
+  color: white;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .control__tags-input-wrap .wrap__element .wrap__remove-element:hover {
+  background-color: black;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .control__tags-input-wrap .wrap__element .text {
+  display: inline-block;
+  height: 30px;
+  width: fit-content;
+  justify-self: center;
+  padding-left: 10px;
 }
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .select2-container {
   z-index: 9999;

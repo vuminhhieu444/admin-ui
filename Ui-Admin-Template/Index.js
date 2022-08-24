@@ -5,7 +5,93 @@ var mobileFullScreenStatus = 0;
 var elem = document.documentElement;
 var sidebarStatus = 0;
 var mobileSidebarStatus = 0;
+var wrap__element = 0;
+var tagsinputElementArray = ["xin chao 1", "xin chao 2", "xin chao 3", "xin chao 4", "xin chao 5", "xin chao 6", "xin chao", "xin chao", "xin chao"];
+//remove tagsinput element
+function CloseTagsinputElement(value) {
+
+    setTimeout(() => {
+        var id = $(".control__tags-input-wrap").children("input").attr("id");
+        var index = tagsinputElementArray.indexOf(value);
+        tagsinputElementArray.splice(index, 1);
+        RenderTagsinputElement(id);
+        var wrapElement = $(".control__tags-input-wrap").height();
+        if (wrapElement > wrap__element) {
+            $(".input__icon").addClass("input__icon-tagsinput");
+        } else if (wrapElement <= wrap__element) {
+            $(".input__icon").removeClass("input__icon-tagsinput");
+        }
+    }, 1);
+}
+//remove tagsinput element
+//add tagsinput element
+$(".tags-input").on("keyup", function(e) {
+    console.log("keyup", e)
+})
+
+// function AddTagsinputElement(inputDataId) {
+//     $("#" + inputDataId).on('keyup', function(e) {
+//         var data = $("#" + inputDataId).val();
+//         console.log("keypress", e)
+//         if (e.which == 13 || e.keyCode === 9) {
+//             if (data != null & data.length > 0 & data != undefined) {
+//                 tagsinputElementArray.push(data);
+//                 RenderTagsinputElement(inputDataId);
+//                 var wrapElement = $(".control__tags-input-wrap").height();
+//                 if (wrapElement > wrap__element) {
+//                     // $(".input__icon").addClass("input__icon-tagsinput");
+//                     var children = $(".input__icon").parent(".input__wrap").children(".input__control").children(".control__tags-input-wrap");
+//                     if (children.length > 0) {
+//                         children.parent(".input__control").parent(".input__wrap").children(".input__icon").addClass("input__icon-tagsinput");
+//                     }
+//                 } else if (wrapElement <= wrap__element) {
+//                     $(".input__icon").removeClass("input__icon-tagsinput");
+//                 }
+//             }
+//         }
+//         $(".control__tags-input-wrap").click();
+//     });
+
+
+// }
+// add tagsinput element
+//render tagsinput text
+function RenderTagsinputElement(id) {
+    //adding class input__icon-tagsinput if overflow-y
+    var wrapElement = $(".control__tags-input-wrap").height();
+    if (wrapElement > wrap__element) {
+        // $(".input__icon").addClass("input__icon-tagsinput");
+        var children = $(".input__icon").parent(".input__wrap").children(".input__control").children(".control__tags-input-wrap");
+        if (children.length > 0) {
+            children.parent(".input__control").parent(".input__wrap").children(".input__icon").addClass("input__icon-tagsinput");
+        }
+    } else if (wrapElement <= wrap__element) {
+        $(".input__icon").removeClass("input__icon-tagsinput");
+    }
+    var tagsinputdiv = document.getElementsByClassName("control__tags-input-wrap")[0];
+    var string = "";
+    tagsinputElementArray.forEach(element => {
+        string += ` <div class='wrap__element'><span class='text'> ${element} </span> <span class='wrap__remove-element' onclick='CloseTagsinputElement("${element}")'><i class="fa-solid fa-xmark"></i></span></div> `
+    });
+    string += '<input type="text" class="tags-input" id="tagsinoutData" onkeypress="AddTagsinputElement(\'' + id + '\')">';
+    tagsinputdiv.innerHTML = string;
+}
+//end render tagsinput text
+
+
+
+
+
+
+
 $(document).ready(function() {
+    wrap__element = $(".control__tags-input-wrap").height();
+    $(window).resize(function() {
+        console.log(window.innerWidth);
+        if (window.innerWidth > 991) {
+            $(".main-container__content").css("display", "flex");
+        }
+    });
     $("#dropdown").click(function() {
         if (dropdownStatus == 0) {
             $(".user__dropdown-option").css("display", "block");
@@ -60,8 +146,7 @@ $(document).ready(function() {
         })
         //    sidebar js
     $("#sidebar__action").click(function() {
-        console.log(document.documentElement.clientWidth);
-        if (sidebarStatus == 0 && document.documentElement.clientWidth > 1023) {
+        if (sidebarStatus == 0) {
             $(".sidebar").css("display", "none");
             $(".body__main-container").css("display", "block");
             $(".off").css("display", "block");
@@ -69,7 +154,7 @@ $(document).ready(function() {
             $("#mobile__logo").attr("src", "./Images/Logo-HNC_icon.png");
             $(".header__left").addClass("header__left_icon");
             sidebarStatus = 1;
-        } else if (sidebarStatus == 1 && document.documentElement.clientWidth > 1023) {
+        } else if (sidebarStatus == 1) {
             $(".off").css("display", "none");
             $(".sidebar").css("display", "block");
             $(".body__main-container").css("display", "flex");
@@ -99,10 +184,14 @@ $(document).ready(function() {
 
     // tagsinput;
     var input = document.querySelector('input[name=tags]');
-    // tagsinput;
-    // initialize Tagify on the above input node reference
-    new Tagify(input)
-    $(".control__tags-input").css({ "background-color": "white", "width": "100%" });
+
+    //tagsinput
+
+    $(".control__tags-input-wrap").click(function() {
+        $(this).children(".tags-input").focus();
+    });
+
+    //tagsinput
 
     function hideSelect2Keyboard(e) {
         $(".select2-search__field")[0].focus();
