@@ -51,7 +51,6 @@
        @if $limitSize<$ownSize {
            position: relative;
            display: inline-block;
-           // word-wrap: break-word;
            overflow: hidden;
            max-height: 3.6em;
            line-height: 1.7em;
@@ -444,15 +443,34 @@
                    display: flex;
                    flex-grow: 2;
                    padding: 20px !important;
-                   overflow-y: scroll;
+                   overflow: scroll;
+                   -ms-overflow-style: none;
+                   /* IE and Edge */
+                   scrollbar-width: none;
+                   /* Firefox */
+                   &::-webkit-scrollbar {
+                       display: none;
+                   }
                    .content__input {
-                       overflow-y: scroll;
                        width: 100%;
                        height: 100%;
                        background-color: #fff;
                        position: relative;
                        padding-left: 0px !important;
                        padding-right: 0px !important;
+                       overflow-y: scroll;
+                       &::-webkit-scrollbar {
+                           border-radius: 10px;
+                           height: 10px;
+                           width: 5px;
+                       }
+                       &::-webkit-scrollbar-thumb {
+                           background: #999;
+                           border-radius: 10px;
+                       }
+                       &::-webkit-scrollbar-track {
+                           border-radius: 10px;
+                       }
                        .button {
                            width: 100%;
                            border-bottom: dotted 1px;
