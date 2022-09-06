@@ -601,6 +601,8 @@ body .body__container .body__main-container .main-container__content .content__i
   height: 100%;
   width: 100%;
   background-color: white;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .control__tags-input-wrap input {
   width: 30%;
@@ -669,6 +671,22 @@ body .body__container .body__main-container .main-container__content .content__i
   line-height: inherit;
   border-left: solid 1px rgb(190, 190, 190);
 }
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .select-box-multiple {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  line-height: normal !important;
+  height: fit-content;
+  line-height: 5;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .select-box-multiple span {
+  border-right: none;
+  border-bottom: none;
+  border-top: none;
+  outline: none;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .select-box-multiple .select2-container .selection .select2-selection--multiple textarea {
+  margin-bottom: 0px;
+}
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .checkbox {
   width: fit-content;
   height: 150%;
@@ -679,6 +697,9 @@ body .body__container .body__main-container .main-container__content .content__i
   transform: scale(1.3);
   margin-left: 4px;
   margin-top: 4%;
+}
+body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .select-box {
+  line-height: 2 !important;
 }
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .check {
   line-height: 100%;

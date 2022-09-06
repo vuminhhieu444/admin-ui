@@ -7,6 +7,19 @@ var sidebarStatus = 0;
 var mobileSidebarStatus = 0;
 var wrap__element = 0;
 var tagsinputElementArray = ["xin chao 1", "xin chao 2", "xin chao 3", "xin chao 4", "xin chao 5", "xin chao 6", "xin chao", "xin chao", "xin chao"];
+
+function RenderHiddenInputData(id) {
+    var data = "";
+    tagsinputElementArray.forEach(element => {
+        data += element;
+        data += ",";
+    });
+    data = data.trim();
+    var input = $(".input__control > input[id='" + id + "']");
+    data = data.substring(0, data.length - 1);
+    input.val(data);
+    console.log(input.val());
+}
 //remove tagsinput element
 function CloseTagsinputElement(value, inputDataId) {
 
@@ -16,14 +29,8 @@ function CloseTagsinputElement(value, inputDataId) {
         tagsinputElementArray.splice(index, 1);
         RenderTagsinputElement(id);
         var wrapElement = $("#" + inputDataId).parent(".control__tags-input-wrap").height();
-        // if (wrapElement > wrap__element) {
-        //     $("#" + inputDataId).parent(".control__tags-input-wrap").parent(".input__control").parent(".input__wrap").children(".input__icon").addClass("input__icon-tagsinput");
-        // } else {
-        //     $("#" + inputDataId).parent(".control__tags-input-wrap").parent(".input__control").parent(".input__wrap").children(".input__icon").removeClass("input__icon-tagsinput");
-        // }
         var wrapElement = $(".control__tags-input-wrap").height();
         if (wrapElement > wrap__element) {
-            // $(".input__icon").addClass("input__icon-tagsinput");
             var children = $("#" + inputDataId).parent(".control__tags-input-wrap");
             if (children.length > 0) {
                 $("#" + inputDataId).parent(".control__tags-input-wrap").parent(".input__control").parent(".input__wrap").children(".input__icon").addClass("input__icon-tagsinput");
@@ -56,6 +63,7 @@ function AddTagsinputElement(inputDataId) {
             }
         }
         $(".control__tags-input-wrap").click();
+        RenderHiddenInputData(inputDataId);
     });
 
 
@@ -67,10 +75,11 @@ function RenderTagsinputElement(id) {
     var tagsinputdiv = document.getElementsByClassName("control__tags-input-wrap")[0];
     var string = "";
     tagsinputElementArray.forEach(element => {
-        string += ` <div class='wrap__element'><span class='text'> ${element} </span> <span class='wrap__remove-element' onclick='CloseTagsinputElement("${element},${id} ")'><i class="fa-solid fa-xmark"></i></span></div> `
+        string += ` <div class='wrap__element'><span class='text'> ${element} </span> <span class='wrap__remove-element' onclick='CloseTagsinputElement("${element},${id}")'><i class="fa-solid fa-xmark"></i></span></div> `
     });
-    string += '<input type="text" class="tags-input" id="tagsinoutData" onkeypress="AddTagsinputElement(\'' + id + '\')">';
+    string += `<input type="text" class="tags-input" id="${id}" onkeypress="AddTagsinputElement('${id}')">`;
     tagsinputdiv.innerHTML = string;
+    RenderHiddenInputData(id);
 }
 //end render tagsinput text
 

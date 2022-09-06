@@ -633,6 +633,8 @@
                                            height: 100%;
                                            width: 100%;
                                            background-color: white;
+                                           padding-left: 5px;
+                                           padding-right: 5px;
                                            //    vertical-align: middle;
                                            input {
                                                width: 30%;
@@ -709,6 +711,28 @@
                                            line-height: inherit;
                                            border-left: solid 1px rgb(190, 190, 190);
                                        }
+                                       .select-box-multiple {
+                                           padding-left: 0px !important;
+                                           padding-right: 0px !important;
+                                           line-height: normal !important;
+                                           height: fit-content;
+                                           line-height: 5;
+                                           span {
+                                               border-right: none;
+                                               border-bottom: none;
+                                               border-top: none;
+                                               outline: none;
+                                           }
+                                           .select2-container {
+                                               .selection {
+                                                   .select2-selection--multiple {
+                                                       textarea {
+                                                           margin-bottom: 0px;
+                                                       }
+                                                   }
+                                               }
+                                           }
+                                       }
                                    }
                                    .checkbox {
                                        width: fit-content;
@@ -721,6 +745,9 @@
                                            margin-top: 4%;
                                        }
                                    }
+                               }
+                               .select-box {
+                                   line-height: 2 !important;
                                }
                                .check {
                                    line-height: 100%;

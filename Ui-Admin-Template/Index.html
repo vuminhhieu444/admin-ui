@@ -339,7 +339,7 @@
                     </div>
                     <div class="input__data ">
                         <div class="row">
-                            <div class="col-4">
+                            <!-- <div class="col-4">
                                 <div class="data__control-wrap">
                                     <div class="wrap__lable">
                                         <label for="">Hello world: </label>
@@ -424,11 +424,20 @@
                             <div class="col-4">
                                 <div class="data__control-wrap">
                                     <div class="wrap__lable">
-                                        <label for="">Hello world: </label>
+                                        <label for="">Multiple select: </label>
                                     </div>
                                     <div class="input__wrap">
+                                        <div class="input__icon">
+                                            <i class="fa fa-safari" aria-hidden="true"></i>
+                                        </div>
                                         <div class="input__control">
-                                            <textarea name="" id="" rows="5"></textarea>
+                                            <select name="" id="seclect-box" class="seclect-box" multiple>
+                                                <option value="">Hello</option>
+                                                <option value="">Hello world</option>
+                                                <option value="">Xin chào</option>
+                                                <option value="">Hello world</option>
+                                                <option value="">Hello world</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -439,11 +448,23 @@
                                         <label for="">Hello world: </label>
                                     </div>
                                     <div class="input__wrap">
+                                        <div class="input__control">
+                                            <textarea name="" id="" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+                            <div class="col-4">
+                                <div class="data__control-wrap">
+                                    <div class="wrap__lable">
+                                        <label for="">Hello world: </label>
+                                    </div>
+                                    <div class="input__wrap">
                                         <div class="input__icon">
                                             <i class="fa fa-safari" aria-hidden="true"></i>
                                         </div>
                                         <div class="input__control">
-                                            <input type="text" hidden id="data">
+                                            <input type="text" hidden id="tagsinoutData">
                                             <div class="control__tags-input-wrap">
                                                 <div class="wrap__element"><span class="text">xin chao</span> <span class="wrap__remove-element" onclick='CloseTagsinputElement("xin chao","tagsinoutData")'><i class="fa-solid fa-xmark"></i></span></div>
                                                 <input type="text" class="tags-input" id="tagsinoutData" onkeydown="AddTagsinputElement('tagsinoutData')">
@@ -452,7 +473,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <!-- <div class="col-4">
                                 <div class="data__control-wrap">
                                     <div class="wrap__lable">
                                         <label for="">Hello world: </label>
@@ -472,6 +493,32 @@
                                     <div class="input__wrap check">
                                         <div class="input__control checkbox">
                                             <input type="radio" class="check__input" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="col-4">
+                                <div class="data__control-wrap">
+                                    <div class="wrap__lable">
+                                        <label for="">Hello world: </label>
+                                    </div>
+                                    <div class="input__wrap select-box">
+                                        <div class="input__icon">
+                                            <i class="fa fa-safari" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="input__control">
+                                            <input type="text" hidden id="tagsinoutData">
+                                            <div class="control__tags-input-wrap select-box-multiple">
+                                                <!-- <div class="wrap__element"><span class="text">xin chao</span> <span class="wrap__remove-element" onclick='CloseTagsinputElement("xin chao","tagsinoutData")'><i class="fa-solid fa-xmark"></i></span></div> -->
+                                                <!-- <input type="text" class="tags-input" id="tagsinoutData" onkeydown="AddTagsinputElement('tagsinoutData')"> -->
+                                                <select name="" id="seclect-box" class="tags-input" multiple>
+                                                    <option value="">Hello</option>
+                                                    <option value="">Hello world</option>
+                                                    <option value="">Xin chào</option>
+                                                    <option value="">Hello world</option>
+                                                    <option value="">Hello world</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
