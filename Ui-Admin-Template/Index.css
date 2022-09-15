@@ -676,7 +676,7 @@ body .body__container .body__main-container .main-container__content .content__i
   padding-right: 0px !important;
   line-height: normal !important;
   height: fit-content;
-  line-height: 5;
+  line-height: 1.2;
 }
 body .body__container .body__main-container .main-container__content .content__input .input__data .data__control-wrap .input__wrap .input__control .select-box-multiple span {
   border-right: none;

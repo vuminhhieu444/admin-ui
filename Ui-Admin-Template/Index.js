@@ -15,56 +15,59 @@ function RenderHiddenInputData(id) {
         data += ",";
     });
     data = data.trim();
-    var input = $(".input__control > input[id='" + id + "']");
+    var input = $("#" + id);
     data = data.substring(0, data.length - 1);
     input.val(data);
     console.log(input.val());
+    console.log("select2", $("#seclect-box").val());
 }
-//remove tagsinput element
-function CloseTagsinputElement(value, inputDataId) {
 
+function CloseTagsinputElement(value, inputDataId) {
     setTimeout(() => {
-        var id = $(".control__tags-input-wrap").children("input").attr("id");
+        var input = $("#" + inputDataId).parent(".input__control").children(".input__hidden");
+        var id = input.attr("id");
+        console.log(id);
         var index = tagsinputElementArray.indexOf(value);
         tagsinputElementArray.splice(index, 1);
         RenderTagsinputElement(id);
-        var wrapElement = $("#" + inputDataId).parent(".control__tags-input-wrap").height();
-        var wrapElement = $(".control__tags-input-wrap").height();
+        var wrapElement = input.parent(".control__tags-input-wrap").height();
         if (wrapElement > wrap__element) {
-            var children = $("#" + inputDataId).parent(".control__tags-input-wrap");
+            var children = input.parent(".control__tags-input-wrap");
             if (children.length > 0) {
-                $("#" + inputDataId).parent(".control__tags-input-wrap").parent(".input__control").parent(".input__wrap").children(".input__icon").addClass("input__icon-tagsinput");
+                input.parent(".control__tags-input-wrap").parent(".input__control").parent(".input__wrap").children(".input__icon").addClass("input__icon-tagsinput");
             }
         } else if (wrapElement <= wrap__element) {
-            $(".input__icon").removeClass("input__icon-tagsinput");
+            input.parent(".control__tags-input-wrap").parent(".input__control").parent(".input__wrap").children(".input__icon").removeClass("input__icon-tagsinput");
         }
     }, 1);
 }
 //remove tagsinput element
 //add tagsinput element
 
-function AddTagsinputElement(inputDataId) {
-    $("#" + inputDataId).on('keydown', function(e) {
-        var data = $("#" + inputDataId).val();
-        if (e.which == 13) {
-            if (data != null & data.length > 0 & data != undefined) {
-                tagsinputElementArray.push(data);
-                RenderTagsinputElement(inputDataId);
-                var wrapElement = $(".control__tags-input-wrap").height();
-                if (wrapElement > wrap__element) {
-                    // $(".input__icon").addClass("input__icon-tagsinput");
-                    var children = $("#" + inputDataId).parent(".control__tags-input-wrap");
-                    if (children.length > 0) {
-                        $("#" + inputDataId).parent(".control__tags-input-wrap").parent(".input__control").parent(".input__wrap").children(".input__icon").addClass("input__icon-tagsinput");
-                    }
-                } else if (wrapElement <= wrap__element) {
-                    $(".input__icon").removeClass("input__icon-tagsinput");
+function AddTagsinputElement(inputDataId, e) {
+    var input = $("#" + inputDataId).closest(".input__control").children(".control__tags-input-wrap").children(".tags-input");
+    // input.on('keydown', function(e) {
+    var data = input.val();
+    if (e.which == 13) {
+        if (data != null && data.length > 0 && data != undefined) {
+            tagsinputElementArray.push(data);
+            RenderTagsinputElement(inputDataId);
+            // console.log("array", tagsinputElementArray);
+            var wrapElement = input.parent(".control__tags-input-wrap").height();
+            if (wrapElement > wrap__element) {
+                // $(".input__icon").addClass("input__icon-tagsinput");
+                var children = input.parent(".control__tags-input-wrap");
+                if (children.length > 0) {
+                    input.parent(".input__wrap").children(".input__icon").addClass("input__icon-tagsinput");
                 }
+            } else if (wrapElement <= wrap__element) {
+                input.parent(".input__wrap").children(".input__icon").removeClass("input__icon-tagsinput");
             }
         }
-        $(".control__tags-input-wrap").click();
-        RenderHiddenInputData(inputDataId);
-    });
+        input.focus();
+    }
+    // alert("Ok");
+    // });
 
 
 }
@@ -72,12 +75,13 @@ function AddTagsinputElement(inputDataId) {
 //render tagsinput text
 function RenderTagsinputElement(id) {
     //adding class input__icon-tagsinput if overflow-y
+    var input = $("#" + id).closest(".input__control").children(".control__tags-input-wrap").children(".tags-input");
     var tagsinputdiv = document.getElementsByClassName("control__tags-input-wrap")[0];
     var string = "";
     tagsinputElementArray.forEach(element => {
         string += ` <div class='wrap__element'><span class='text'> ${element} </span> <span class='wrap__remove-element' onclick='CloseTagsinputElement("${element},${id}")'><i class="fa-solid fa-xmark"></i></span></div> `
     });
-    string += `<input type="text" class="tags-input" id="${id}" onkeypress="AddTagsinputElement('${id}')">`;
+    string += `<input type="text" class="tags-input" onkeydown="AddTagsinputElement('${id}',event)">`;
     tagsinputdiv.innerHTML = string;
     RenderHiddenInputData(id);
 }

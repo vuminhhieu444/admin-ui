@@ -464,16 +464,16 @@
                                             <i class="fa fa-safari" aria-hidden="true"></i>
                                         </div>
                                         <div class="input__control">
-                                            <input type="text" hidden id="tagsinoutData">
+                                            <input type="text" class="input__hidden" hidden id="tagsinoutData">
                                             <div class="control__tags-input-wrap">
                                                 <div class="wrap__element"><span class="text">xin chao</span> <span class="wrap__remove-element" onclick='CloseTagsinputElement("xin chao","tagsinoutData")'><i class="fa-solid fa-xmark"></i></span></div>
-                                                <input type="text" class="tags-input" id="tagsinoutData" onkeydown="AddTagsinputElement('tagsinoutData')">
+                                                <input type="text" class="tags-input" id="" onkeydown="AddTagsinputElement('tagsinoutData', event)">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="col-4">
+                            <div class="col-4">
                                 <div class="data__control-wrap">
                                     <div class="wrap__lable">
                                         <label for="">Hello world: </label>
@@ -496,7 +496,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <div class="col-4">
                                 <div class="data__control-wrap">
                                     <div class="wrap__lable">
@@ -507,16 +507,13 @@
                                             <i class="fa fa-safari" aria-hidden="true"></i>
                                         </div>
                                         <div class="input__control">
-                                            <input type="text" hidden id="tagsinoutData">
                                             <div class="control__tags-input-wrap select-box-multiple">
-                                                <!-- <div class="wrap__element"><span class="text">xin chao</span> <span class="wrap__remove-element" onclick='CloseTagsinputElement("xin chao","tagsinoutData")'><i class="fa-solid fa-xmark"></i></span></div> -->
-                                                <!-- <input type="text" class="tags-input" id="tagsinoutData" onkeydown="AddTagsinputElement('tagsinoutData')"> -->
                                                 <select name="" id="seclect-box" class="tags-input" multiple>
-                                                    <option value="">Hello</option>
-                                                    <option value="">Hello world</option>
-                                                    <option value="">Xin chào</option>
-                                                    <option value="">Hello world</option>
-                                                    <option value="">Hello world</option>
+                                                    <option value="Hello">Hello</option>
+                                                    <option value="Hello world">Hello world</option>
+                                                    <option value="Xin chào">Xin chào</option>
+                                                    <option value="Hello world">Hello world</option>
+                                                    <option value="Hello world">Hello world</option>
                                                 </select>
                                             </div>
                                         </div>
