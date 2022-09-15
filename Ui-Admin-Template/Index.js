@@ -25,11 +25,12 @@ function RenderHiddenInputData(id) {
 function CloseTagsinputElement(value, inputDataId) {
     setTimeout(() => {
         var input = $("#" + inputDataId).parent(".input__control").children(".input__hidden");
-        var id = input.attr("id");
-        console.log(id);
+        // console.log(input);
+        // var id = input.attr("id");
+        // console.log("id", id);
         var index = tagsinputElementArray.indexOf(value);
         tagsinputElementArray.splice(index, 1);
-        RenderTagsinputElement(id);
+        RenderTagsinputElement(inputDataId);
         var wrapElement = input.parent(".control__tags-input-wrap").height();
         if (wrapElement > wrap__element) {
             var children = input.parent(".control__tags-input-wrap");
